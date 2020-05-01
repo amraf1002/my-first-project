@@ -1,0 +1,3 @@
+
+--extra-index-url https://user-admin:super-password@pypi-server.awsome.cloud/simple/
+awesome_utility==0.0.1
