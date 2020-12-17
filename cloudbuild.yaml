@@ -8,10 +8,8 @@ steps:
     id: 'build wheel'
     entrypoint: 'python'
     args: ['setup.py', 'bdist_wheel']
-    dir: 'example-package'
     
   - name: 'gcr.io/$PROJECT_ID/pypi-tools:latest'
     id: 'list wheel'
     entrypoint: 'bash'
     args: ['ls']
-    dir: 'example-package'
