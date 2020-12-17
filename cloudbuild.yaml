@@ -11,5 +11,5 @@ steps:
     
   - name: 'gcr.io/$PROJECT_ID/pypi-tools:latest'
     id: 'list wheel'
-    entrypoint: 'bash'
+    dir: 'awesome_utility'
     args: ['ls']
