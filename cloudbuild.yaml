@@ -8,8 +8,10 @@ steps:
     id: 'build wheel'
     entrypoint: 'python'
     args: ['setup.py', 'bdist_wheel']
+    dir: 'example-package'
     
-  - name: 'gcr.io/$PROJECT_ID/pypi-tools:latest'
-    id: 'list wheel'
-    dir: 'awesome_utility'
-    args: ['ls']
+artifacts:
+  objects:
+    location: 'gs://cloud-build-output/' 
+    paths: ['dist/awesome_utility-0.0.1-py3-none-any.whl']
+    
