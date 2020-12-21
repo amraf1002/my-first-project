@@ -12,7 +12,7 @@ steps:
   - name: 'gcr.io/$PROJECT_ID/pypi-tools:latest'
     id: 'build dataroc image'
     entrypoint: 'bash'
-    args: ['./dataproc_build_image.sh']
+    args: ['./dataproc_image_build.sh']
     
 artifacts:
   objects:
