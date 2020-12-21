@@ -9,8 +9,12 @@ steps:
     entrypoint: 'python'
     args: ['setup.py', 'bdist']
     
+  - name: 'gcr.io/$PROJECT_ID/pypi-tools:latest'
+    id: 'build dataroc image'
+    entrypoint: 'bash'
+    args: ['./dataproc_build_image.sh']
+    
 artifacts:
   objects:
     location: 'gs://cloud-build-output/' 
     paths: ['dist/*']
-    
